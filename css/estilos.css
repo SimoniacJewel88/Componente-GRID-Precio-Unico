@@ -18,13 +18,13 @@ body {
 .contenido-grid {
   display: grid;
   grid-template-rows: auto 1fr 1fr;
-  background-color: red;
   width: 320px;
   margin: 0 auto;
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: 0px 10px 30px #c8daea, 3px 9px 20px #c8daea, -3px 9px 20px #c8daea;
 }
 
 .seccion-descripcion {
@@ -122,13 +122,58 @@ body {
   line-height: 1.3rem;
 }
 
+@media (min-width: 768px) {
+  .principal {
+    background-color: #e5eff5;
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .contenido-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    width: 640px;
+    margin-top: 6rem;
+  }
+
+  .seccion-descripcion {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    padding: 2rem;
+    padding-right: 7rem;
+    height: 205px;
+  }
+  .seccion-descripcion div h1 {
+    font-size: 1.5rem;
+  }
+  .seccion-descripcion div .descripcion {
+    margin-top: 0.5rem;
+  }
+
+  .seccion-pago {
+    height: 250px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+  }
+
+  .seccion-nosotros {
+    height: 250px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+  }
+}
 .attribution {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #2ab2af;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=estilos.css.map */

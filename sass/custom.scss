@@ -6,6 +6,7 @@ $bright-yellow: hsl(71, 73%, 54%);
 // Colores Neutrales
 
 $light-gray: hsl(204, 43%, 93%);
+$light-gray-shadow: hsl(207, 44%, 85%);
 $grayish-blue: hsl(218, 22%, 67%);
 
 $base-font: 'Karla', sans-serif;
@@ -30,14 +31,14 @@ body {
 .contenido-grid {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
-    background-color: red;
 
     width: 320px;
     margin: 0 auto;
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     border-radius: 0.5rem; 
     overflow: hidden;
+    box-shadow: 0px 10px 30px $light-gray-shadow, 3px 9px 20px $light-gray-shadow, -3px 9px 20px $light-gray-shadow;
 }
 
 .seccion-descripcion {
@@ -147,10 +148,66 @@ body {
     }
 }
 
+// MEDIA QUERIES
+@media (min-width: 768px) {
+
+    .principal {
+        background-color: $light-gray;
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .contenido-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        width: 640px;
+        margin-top: 6rem;
+    }
+
+    .seccion-descripcion {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        // border-radius: 0.5rem;
+        padding: 2rem;
+        padding-right: 7rem;
+        height: 205px;
+        div {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .descripcion {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .seccion-pago {
+        height: 250px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
+
+    .seccion-nosotros {
+        height: 250px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
+
+}
+
+
+
+
 // Estilos Frontend Mentor
 .attribution {
-    font-size: 11px; text-align: center;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: $cyan;
+    text-decoration: none;
 }
