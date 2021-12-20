@@ -1,5 +1,6 @@
 // Colores Primarios
 $cyan: hsl(179, 62%, 43%);
+$cyan-light: hsl(181, 47%, 51%);
 $bright-yellow: hsl(71, 73%, 54%);
 
 // Colores Neutrales
@@ -7,10 +8,143 @@ $bright-yellow: hsl(71, 73%, 54%);
 $light-gray: hsl(204, 43%, 93%);
 $grayish-blue: hsl(218, 22%, 67%);
 
+$base-font: 'Karla', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $light-gray;
+    font-family: $base-font;
+}
+
+.principal {
+    background-color: $light-gray;
+    width: 380px;
+    margin: 0 auto;
+}
+
+.contenido-grid {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    background-color: red;
+
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 0.5rem; 
+    overflow: hidden;
+}
+
+.seccion-descripcion {
+    background-color: white;
+    height: 260px;
+    padding: 1.2rem;
+
+    div {
+        padding-left: 5px;
+        padding-right: 5px;
+
+        h1 {
+            color: $cyan;
+            line-height: 2.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 10px;
+            color: $bright-yellow;
+        }
+        .descripcion {
+            font-weight: 400;
+            color: $grayish-blue;
+            font-size: 14px;
+            line-height: 1.5rem;
+            margin-top: auto;
+        }
+    }
+}
+
+.seccion-pago {
+    background-color: $cyan;
+    height: 220px;
+    padding: 1.2rem;
+    color: white;
+
+    div {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+
+        h2 {
+            // color: white;
+            font-size: 1.1rem;
+        }
+
+        .pago-flex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 1rem;
+
+            span {
+                font-weight: 700;
+                font-size: 2rem;
+                margin-right: 0.8rem;
+            }
+            p {
+                color: $light-gray;
+                // color: red;
+                opacity: 0.6;
+                padding-top: 0;
+            }
+        }
+
+        p {
+            color: $light-gray;
+            
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            background-color: $bright-yellow;
+            padding: 0.8rem;
+            margin-top: 2rem;
+            border-radius: 0.4rem;
+            box-shadow: 0px 4px 8px hsl(179, 74%, 33%);
+        }
+    }
+}
+
+.seccion-nosotros {
+    background-color: $cyan-light;
+    height: 220px;
+    padding: 1.2rem;
+    color: white;
+    div {
+        padding-left: 5px;
+        padding-right: 5px;
+        color: $light-gray;
+        
+        h2 {
+            // color: white;
+            font-size: 1.1rem;
+        }
+        p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+        }
+    }
 }
 
 // Estilos Frontend Mentor
